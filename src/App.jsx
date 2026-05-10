@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 
 // 샘플 화면 컴포넌트들
-const Home = () => <div>🏠 홈 대시보드 화면입니다.</div>;
+const Home = () => <div>🏠 홈 대시보드 화면입니다.반영테스트!!!!!!!!!!!!!!!</div>;
 const UserList = () => <div>👥 사용자 관리 리스트 화면입니다.</div>;
 const Setting = () => <div>⚙️ 시스템 설정 화면입니다.</div>;
 
@@ -9,6 +9,7 @@ const App = () => {
   // 1. 탭 상태 관리 (초기값은 홈)
   const [tabs, setTabs] = useState([{ id: 'home', title: '홈', component: <Home /> }]);
   const [activeTab, setActiveTab] = useState('home');
+
 
   // 2. 메뉴 클릭 시 탭 추가 로직
   const addTab = (id, title, component) => {
