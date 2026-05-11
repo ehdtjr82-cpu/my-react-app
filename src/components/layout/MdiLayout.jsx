@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import Sidebar from './Sidebar'; // 같은 폴더에 있을 경우
 import { useMdi } from '../../hooks/useMdi';
 import { MENU_LIST } from '../../constants/menuConfig';
 
@@ -9,7 +10,7 @@ const MdiLayout = () => {
   return (
     <div style={{ display: 'flex', height: '100vh' }}>
       {/* 1. 사이드바 영역 */}
-      <div style={{ width: '200px', background: '#2c3e50', color: '#fff' }}>
+      {/* <div style={{ width: '200px', background: '#2c3e50', color: '#fff' }}>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {MENU_LIST.map((menu) => (
             <li 
@@ -21,7 +22,9 @@ const MdiLayout = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
+      {/* 1. 사이드바 영역 */}
+      <Sidebar menuList={MENU_LIST} onMenuClick={openTab} />
 
       {/* 2. 메인 컨텐츠 영역 */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
